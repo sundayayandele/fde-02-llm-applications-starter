@@ -1,7 +1,8 @@
 > **Learner starter.** This repo is generated from the reference solution.
 > Work through `labs/` week by week and replace each `TODO` until `make exercises` is green
 > (`make test` stays green throughout).
-> Do not open the reference repo until you have tried each exercise yourself.
+> The reference solution unlocks on [itlearning.tech](https://itlearning.tech) once you have passed
+> this phase's exit check or capstone.
 
 # fde-02-llm-applications: document assistant over company filings
 
@@ -17,7 +18,7 @@ Phase 2 (weeks 11–15) and **Capstone 1** of the **Forward Deployed ML Engineer
   - **Query rewriting** with a finance glossary ("capex" → "purchases of property, plant and equipment").
   - **Filing routing** by company and fiscal year.
   - A **reranker**: an offline lexical one, or a Mistral grader.
-- **Guardrails (v1.1):** instruction-like sentences are quarantined and personal data masked at ingestion. Advice, personal-data, unknown-company and out-of-scope questions are declined. Answers are checked on the way out (ADR-008, measured by [fde-03](https://github.com/sundayayandele/fde-03-evaluation)).
+- **Guardrails (v1.1):** instruction-like sentences are quarantined and personal data masked at ingestion. Advice, personal-data, unknown-company and out-of-scope questions are declined. Answers are checked on the way out (ADR-008, measured by fde-03).
 - **Answers:** Mistral (or any provider in `config/providers.yaml`) answers only from numbered passages, cites them as `[n]`, and calls a **`financial_ratio` tool** for arithmetic. A **refusal gate** stops before any model call when the evidence is too weak. Without an API key, an **extractive baseline** answers offline.
 - **Interfaces:**
   - `POST /api/v1/ask` (with tool calls) and `POST /api/v1/ask/stream` (server-sent events).
@@ -130,7 +131,7 @@ deploy/ · terraform/ · monitoring/
 
 ## Reference and starter
 
-[`fde-02-llm-applications`](https://github.com/sundayayandele/fde-02-llm-applications) is the **reference** repo: complete code and measured results. [`fde-02-llm-applications-starter`](https://github.com/sundayayandele/fde-02-llm-applications-starter) is generated from it with `make starter`: each exercise becomes a `NotImplementedError("TODO ...")` stub, exercise tests carry `@pytest.mark.exercise` (`make exercises`), and the results table is blank for your numbers.
+`fde-02-llm-applications` is the **reference** repo (private: learners download it from the course on [itlearning.tech](https://itlearning.tech) after passing this phase's exit check or capstone): complete code and measured results. [`fde-02-llm-applications-starter`](https://github.com/sundayayandele/fde-02-llm-applications-starter) is generated from it with `make starter`: each exercise becomes a `NotImplementedError("TODO ...")` stub, exercise tests carry `@pytest.mark.exercise` (`make exercises`), and the results table is blank for your numbers.
 
 ## Licence
 

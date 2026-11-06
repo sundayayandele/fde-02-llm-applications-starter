@@ -6,7 +6,7 @@
 
 ## Context
 
-[fde-03](https://github.com/sundayayandele/fde-03-evaluation) evaluated v1.0.0 as a black box:
+fde-03 evaluated v1.0.0 as a black box:
 
 | Finding | v1.0.0 measurement |
 | --- | --- |
